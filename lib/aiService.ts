@@ -23,7 +23,7 @@ export const getAIRecommendations = async (
     const currentName = currentProductId ? MOCK_PRODUCTS.find(p => p.id === currentProductId)?.name : null;
 
     const prompt = `
-      You are an expert e-commerce recommendation system for "PASMAB COMERCIAL", a premier retailer in Angola.
+      You are an expert e-commerce recommendation system for a premier retailer in Angola.
       Currency used is Angolan Kwanza (Kz).
       
       CATALOG:

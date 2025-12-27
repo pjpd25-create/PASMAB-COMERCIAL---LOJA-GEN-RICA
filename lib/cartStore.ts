@@ -4,12 +4,12 @@ import { CartItem, Product } from '../types';
 
 export const useCart = () => {
   const [items, setItems] = useState<CartItem[]>(() => {
-    const saved = localStorage.getItem('pasmab_cart');
+    const saved = localStorage.getItem('shopping_cart_angola');
     return saved ? JSON.parse(saved) : [];
   });
 
   useEffect(() => {
-    localStorage.setItem('pasmab_cart', JSON.stringify(items));
+    localStorage.setItem('shopping_cart_angola', JSON.stringify(items));
   }, [items]);
 
   const addToCart = useCallback((product: Product) => {

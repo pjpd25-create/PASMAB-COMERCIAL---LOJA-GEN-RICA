@@ -4,7 +4,7 @@ import ProductCard from '../components/ProductCard';
 import RecommendationSection from '../components/RecommendationSection';
 import { MOCK_PRODUCTS, MOCK_CATEGORIES } from '../constants';
 import { Product } from '../types';
-import { Search, ChevronLeft, ChevronRight, Zap, Flame, TrendingUp } from 'lucide-react';
+import { Search, ChevronLeft, ChevronRight, Zap, Flame, TrendingUp, ShoppingBag } from 'lucide-react';
 
 interface HomePageProps {
   onAddToCart: (p: Product) => void;
@@ -47,7 +47,7 @@ const HomePage: React.FC<HomePageProps> = ({ onAddToCart }) => {
             <span className="text-white text-xs font-black tracking-widest uppercase">Live: {MOCK_PRODUCTS.length} Produtos Disponíveis</span>
           </div>
           <h1 className="text-6xl md:text-8xl font-black text-white tracking-tighter leading-none mb-4 uppercase">
-            PASMAB <span className="text-[#f97316]">COMERCIAL</span>
+            QUALIDADE <span className="text-[#f97316]">TOTAL</span>
           </h1>
           <p className="text-gray-400 text-lg md:text-2xl font-medium max-w-2xl mx-auto">
             A maior e mais rápida experiência de compras em Angola.
@@ -93,7 +93,7 @@ const HomePage: React.FC<HomePageProps> = ({ onAddToCart }) => {
             <Search className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#f97316] transition-colors" size={20} />
             <input
               type="text"
-              placeholder="Pesquisar em todo o catálogo PASMAB..."
+              placeholder="Pesquisar em todo o catálogo..."
               className="w-full pl-14 pr-6 py-5 bg-gray-50 border-2 border-transparent rounded-[2rem] focus:bg-white focus:border-[#f97316] outline-none transition-all shadow-sm"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -155,7 +155,7 @@ const HomePage: React.FC<HomePageProps> = ({ onAddToCart }) => {
           </div>
           <div className="relative z-10 max-w-xl text-center md:text-left">
             <h2 className="text-4xl md:text-6xl font-black mb-6 leading-tight uppercase">O Futuro do Comércio em Angola.</h2>
-            <p className="text-lg opacity-90 mb-8 font-medium">Junte-se a milhares de clientes satisfeitos na PASMAB COMERCIAL. Qualidade, rapidez e confiança.</p>
+            <p className="text-lg opacity-90 mb-8 font-medium">Junte-se a milhares de clientes satisfeitos. Qualidade, rapidez e confiança em cada entrega.</p>
             <button className="bg-white text-[#f97316] px-10 py-4 rounded-2xl font-black text-lg hover:shadow-xl transition-all active:scale-95">
               CRIAR CONTA GRÁTIS
             </button>
@@ -163,7 +163,7 @@ const HomePage: React.FC<HomePageProps> = ({ onAddToCart }) => {
           <div className="mt-12 md:mt-0 relative z-10">
              <div className="grid grid-cols-2 gap-4">
                {[...MOCK_PRODUCTS].slice(0, 4).map(p => (
-                 <img key={p.id} src={p.imageUrl} className="w-24 h-24 md:w-32 md:h-32 rounded-2xl object-cover border-4 border-white/20 shadow-lg" alt="Pasmab Preview" />
+                 <img key={p.id} src={p.imageUrl} className="w-24 h-24 md:w-32 md:h-32 rounded-2xl object-cover border-4 border-white/20 shadow-lg" alt="Preview" />
                ))}
              </div>
           </div>

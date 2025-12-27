@@ -1,7 +1,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 
-const HISTORY_KEY = 'pasmab_view_history';
+const HISTORY_KEY = 'view_history_angola';
 const MAX_HISTORY = 10;
 
 export const useHistory = () => {

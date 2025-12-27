@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShoppingCart, User, LogOut } from 'lucide-react';
+import { ShoppingCart, User, LogOut, ShoppingBag } from 'lucide-react';
 import { useCart } from '../lib/cartStore';
 
 interface LayoutProps {
@@ -19,8 +19,9 @@ const Layout: React.FC<LayoutProps> = ({ children, user, onLogout, openCart }) =
     <div className="min-h-screen flex flex-col">
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm border-b border-gray-100">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <Link to="/" className="text-2xl font-black text-[#f97316] tracking-tighter uppercase">
-            PASMAB<span className="text-gray-900 ml-1">COMERCIAL</span>
+          <Link to="/" className="text-2xl font-black text-[#f97316] flex items-center tracking-tighter uppercase">
+            <ShoppingBag className="mr-2" />
+            LOJA<span className="text-gray-900 ml-1">ONLINE</span>
           </Link>
 
           <nav className="hidden md:flex items-center space-x-8">
@@ -68,9 +69,12 @@ const Layout: React.FC<LayoutProps> = ({ children, user, onLogout, openCart }) =
       <footer className="bg-gray-950 text-white py-16">
         <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12">
           <div>
-            <h3 className="text-xl font-bold text-[#f97316] mb-6 uppercase">PASMAB COMERCIAL</h3>
+            <h3 className="text-xl font-bold text-[#f97316] mb-6 uppercase flex items-center">
+              <ShoppingBag className="mr-2" size={20} />
+              LOJA ONLINE
+            </h3>
             <p className="text-gray-400 text-sm leading-relaxed">
-              A maior loja online de Angola. Entregas rápidas em Luanda, Benguela e todo o país.
+              A tua plataforma de compras em Angola. Entregas rápidas em Luanda, Benguela e todo o país com a melhor qualidade.
             </p>
           </div>
           <div>
@@ -104,7 +108,7 @@ const Layout: React.FC<LayoutProps> = ({ children, user, onLogout, openCart }) =
           </div>
         </div>
         <div className="container mx-auto px-4 mt-16 pt-8 border-t border-gray-900 text-center text-gray-500 text-sm">
-          &copy; {new Date().getFullYear()} PASMAB COMERCIAL Angola. Qualidade em primeiro lugar.
+          &copy; {new Date().getFullYear()} Angola Online. Qualidade em primeiro lugar.
         </div>
       </footer>
     </div>
