@@ -1,0 +1,8 @@
+{
+  "name": "PASMAB COMERCIAL",
+  "description": "Uma plataforma de e-commerce limpa e moderna com sotaque angolano, apresentando filtragem de produtos, carrinho persistente, avaliações e uma experiência de checkout suave.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
